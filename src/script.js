@@ -22,12 +22,19 @@ let currentItem;
 let gameDone = false;
 let gameTimeout;
 
-
+// Function will be called when user clicks on start button
 let InitializeGame = () => {
+    // Disable button for user
     startButton.disabled = true;
+
+    // Initialize current time and user score to default values
     currentTime = 30;
     userScore = 0;
+
+    // Will reset HTML user score display
     userScoreDisplay.innerText = 0;
+
+    // Will set gameDone to false, so game timers work
     gameDone = false;
 
     setTimeout(gameTimer, 1000);
@@ -82,9 +89,10 @@ let setNewItem = () => {
         currentItem.removeEventListener('click', moleClick);
     }
     
-    // changes the 
+    // Changes the current item to a new random one
     currentItem = randomArrayItem(gameItems);
 
+    // 
     currentItem.src = 'img/mole.png';
     currentItem.addEventListener('click', moleClick);
 
