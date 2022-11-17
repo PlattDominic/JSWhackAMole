@@ -28,15 +28,18 @@
         
         <div class="h-100 d-flex justify-content-center">
             <div class="row justify-content-center p-3">
+                <!-- Contains game title and any game outputs such as current score -->
                 <div class="col-12 text-center">
                     <h1 class="mt-5 fw-bold">Whack A Mole!!</h1>
 
                     <h1 id="game-timer" class="mt-3">0s</h1>
                     <h2 id="score" class="mt-3">0</h2>
-
+                    
+                    <!-- Button for user to start game, initializes game -->
                     <button id="start-button" onclick="InitializeGame()" class="btn text-dark bg-success mt-3 mb-3" style="width: 7rem; height: 4vh;">Start</button>
                 </div>
                 
+                <!-- Contains all images where a mole can be positioned at -->
                 <div id="game-items" class="col-12 d-flex justify-content-center">
                     <img id="1" src="./img/dirt.svg" alt="">
                     <img id="2" src="./img/dirt.svg" alt="">
